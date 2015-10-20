@@ -23,7 +23,10 @@ Route::group(['prefix' => '/'], function() {
  * admin
  * */
 Route::group(['prefix' => '/admin'], function() {
-    Route::get('/', function () {
-        return view('welcome');
+    Route::get('/', ['as' => 'admin', 'uses' => 'AdminController@index']);
+    Route::get('/relatorio', ['as' => 'admin.relatorio', 'uses' => 'AdminController@relatorioPagos']);
+
+    Route::group(['prefix' => '/cadastro'], function() {
+        Route::get('/evento', ['as' => 'admin.cadastro.evento.grid', 'uses' => 'EventoController@grid']);
     });
 });
