@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @extends('layout.partial.navbar')
+    @extends('layout.partial.navbar-home')
 
     <div class="container">
 
