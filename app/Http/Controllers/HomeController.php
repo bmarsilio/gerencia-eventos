@@ -8,8 +8,9 @@ use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function showEventos()
     {
         return view('home.index');
     }
+
 }
