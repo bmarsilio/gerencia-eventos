@@ -15,9 +15,7 @@
  * home
  * */
 Route::group(['prefix' => '/'], function() {
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showEventos']);
 });
 
 
