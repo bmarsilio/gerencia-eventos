@@ -13,8 +13,8 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-    public function relatorioPagos()
+    public function relatorioInscritos()
     {
-
+        return view('admin.relatorios.inscritos');
     }
 }
